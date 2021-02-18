@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_parrafo",
+  "info": {
+    "name": "Parrafo",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Parrafo": {
+      "type": "richtext"
+    }
+  }
+}

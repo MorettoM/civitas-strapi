@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_cita",
+  "info": {
+    "name": "Cita",
+    "icon": "align-left",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Cita": {
+      "type": "string"
+    },
+    "Nombre": {
+      "type": "string"
+    },
+    "Fecha": {
+      "type": "date"
+    }
+  }
+}

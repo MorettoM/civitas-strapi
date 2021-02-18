@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_imagen",
+  "info": {
+    "name": "Imagen",
+    "icon": "camera",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

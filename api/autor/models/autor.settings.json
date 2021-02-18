@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "autor",
+  "info": {
+    "name": "Autor",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "private": false,
+      "required": true
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "descripcion": {
+      "type": "text"
+    },
+    "rol": {
+      "type": "string"
+    },
+    "articulos": {
+      "via": "autores",
+      "collection": "articulo"
+    }
+  }
+}

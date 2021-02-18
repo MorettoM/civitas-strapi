@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "volumen",
+  "info": {
+    "name": "Volumen",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Highlighted": {
+      "type": "boolean"
+    },
+    "Titulo": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Fecha": {
+      "type": "date"
+    },
+    "Ultimo": {
+      "type": "boolean",
+      "unique": false
+    },
+    "Numero": {
+      "type": "biginteger",
+      "unique": true
+    }
+  }
+}

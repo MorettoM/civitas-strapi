@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articulo",
+  "info": {
+    "name": "Articulo",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "highlighted": {
+      "type": "boolean"
+    },
+    "titulo": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "fecha": {
+      "type": "date"
+    },
+    "numero": {
+      "type": "biginteger",
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "titulo",
+      "required": true
+    },
+    "subhighlighted": {
+      "type": "boolean"
+    },
+    "autores": {
+      "collection": "autor",
+      "via": "articulos",
+      "dominant": true
+    },
+    "portada": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "volumen": {
+      "model": "volumen"
+    },
+    "subtitulo": {
+      "type": "string"
+    },
+    "contenido": {
+      "type": "dynamiczone",
+      "components": [
+        "contenido.cita",
+        "contenido.imagen",
+        "contenido.parrafo"
+      ]
+    }
+  }
+}
